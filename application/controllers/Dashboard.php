@@ -6,12 +6,12 @@ class Dashboard extends CI_Controller {
 	public function __construct(){
 		//call model 
 		parent::__construct();
+		permission();
 		$this->load->model("Product");
 	}
 
 	public function index()
 	{
-		
 		$data["products"] = $this->Product->index();
 
 		$data["title"] = "Dashboard";
