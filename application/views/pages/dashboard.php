@@ -25,12 +25,16 @@
 			</thead>
 			<tbody>
 				<?php foreach ($products as $product) : ?>
-				<tr>
-					<td><?= $product['code']?></td>
-					<td><?= $product['name']?></td>
-					<td><?= $product['price']?></td>
-					<td><?= $product['description']?></td>
-				</tr>
+					
+					<?php if($product['active'] == '1') : ?>
+						<tr>
+							<td><?= $product['code']?></td>
+							<td><?= $product['name']?></td>
+							<td><?= $product['price']?></td>
+							<td><?= $product['description']?></td>
+						</tr>
+					<?php endif ; ?>
+				
         		<?php endforeach; ?>
 			</tbody>
 		</table>
