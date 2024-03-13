@@ -3,11 +3,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Products extends CI_Controller {
 
-	public function index(){
+	public function __construct(){
+		//call model 
+		parent::__construct();
 		$this->load->model("Product");
-		$data["products"] = $this->Product->index();
+	}
 
+	public function index(){
 		
+		$data["products"] = $this->Product->index();
 
 		$data["title"] = "Products";
 		$this->load->view('templates/header', $data);
@@ -35,13 +39,13 @@ class Products extends CI_Controller {
 		
 		$product['active'] = 1;
 
-		$this->load->model("Product");
+		
 		$this->Product->store($product);
 		redirect('dashboard');
 	}
 
 	public function edit($id){
-		$this->load->model("Product");
+		
 		$data["product"] = $this->Product->show($id);
 
 		$data["title"] = "Edit Product";
@@ -55,7 +59,7 @@ class Products extends CI_Controller {
 	}
 
 	public function update($id){
-		$this->load->model("Product");
+		
 
 		$product = $_POST;
 
@@ -65,7 +69,7 @@ class Products extends CI_Controller {
 	}
 
 	public function active($id){
-		$this->load->model("Product");
+		
 		$data["product"] = $this->Product->show($id);
 		$product = $data["product"];
 
@@ -76,7 +80,7 @@ class Products extends CI_Controller {
 	}
 
 	public function delete($id){
-		$this->load->model("Product");
+		
 		$data["product"] = $this->Product->show($id);
 		$product = $data["product"];
 
