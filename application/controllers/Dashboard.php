@@ -8,11 +8,13 @@ class Dashboard extends CI_Controller {
 		parent::__construct();
 		permission();
 		$this->load->model("Product");
+		$this->load->model("User");
 	}
 
 	public function index()
 	{
 		$data["products"] = $this->Product->index();
+		$data["users"] = $this->User->index();
 
 		$data["title"] = "Dashboard";
 		$this->load->view('templates/header', $data);

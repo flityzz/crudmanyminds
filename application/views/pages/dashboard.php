@@ -4,7 +4,7 @@
 		<h1 class="h2">Dashboard</h1>
 		<div class="btn-toolbar mb-2 mb-md-0">
 			<div class="btn-group mr-2">
-				<a href="" class="btn btn-sm btn-outline-secondary"><i class="fas fa-plus-square"></i> Product</a>
+				<a href="<?= base_url('') ?>products/new" class="btn btn-sm btn-outline-secondary"><i class="fas fa-plus-square"></i> Product</a>
 			</div>
 		</div>
 	</div>
@@ -48,14 +48,23 @@
 		<table class="table table-bordered table-hover">
 			<thead>
 				<tr>
-					<th>#</th>
 					<th>Name</th>
 					<th>Email</th>
 					<th>Country</th>
 				</tr>
 			</thead>
 			<tbody>
+				<?php foreach ($users as $user) : ?>
+					
+					<?php if($user['active'] == '1') : ?>
+						<tr>
+							<td><?= $user['username']?></td>
+							<td><?= $user['email']?></td>
+							<td><?= $user['country']?></td>
+						</tr>
+					<?php endif ; ?>
 				
+        		<?php endforeach; ?>
 			</tbody>
 		</table>
 	</div>
