@@ -32,7 +32,6 @@
         }
       }
     </style>
-    <!-- Custom styles for this template -->
     <link href="https://getbootstrap.com/docs/4.4/examples/sign-in/signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
@@ -42,6 +41,12 @@
         <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <?php if(isset($message)) { ?>
+            <strong class="text-danger" ><?= $message ?></strong><br>
+        <?php } ?>
+        <?php if(isset($attempts)) { ?>
+            <input type="hidden" name="attempts" value="<?= $attempts ?>">
+        <?php } ?>
             <p>
                 <a href="<?=base_url('')?>signup">Don't Have an Account?</a>
             </p>

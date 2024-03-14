@@ -10,8 +10,6 @@ CREATE TABLE `users` (
   `city` varchar(100) DEFAULT NULL,
   `state` varchar(100) DEFAULT NULL,
   `country` varchar(100) DEFAULT NULL, 
-  `failed_login_attempts` int(11) DEFAULT '0',
-  `last_failed_login` datetime DEFAULT NULL,
   `active` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
@@ -64,5 +62,12 @@ CREATE TABLE `suppliers` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(255) NOT NULL,
   `active` tinyint(1) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE `ip_details` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `ip` VARCHAR(50),
+  `login_time` VARCHAR(50),
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
