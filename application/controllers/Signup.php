@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Signup extends CI_Controller {
     
     public function __construct(){
-		//call model 
+		
 		parent::__construct();
 		$this->load->model("User");
 	}

@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Products extends CI_Controller {
 
 	public function __construct(){
-		//call model 
+		
 		parent::__construct();
 		permission();
 		$this->load->model("Product");

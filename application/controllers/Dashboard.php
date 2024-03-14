@@ -3,8 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller {
 
-	public function __construct(){
-		//call model 
+	public function __construct(){ 
 		parent::__construct();
 		permission();
 		$this->load->model("Product");
@@ -20,7 +19,7 @@ class Dashboard extends CI_Controller {
 		$this->load->view('templates/header', $data);
 		$this->load->view('templates/nav-top', $data);
 
-		$this->load->view('pages/dashboard', $data); // page view name
+		$this->load->view('pages/dashboard', $data); 
 		
 		$this->load->view('templates/footer', $data);
 		$this->load->view('templates/js', $data);
