@@ -7,6 +7,8 @@ Clone the repository.
 
 Copy the repository and paste it into the XAMPP's "htdocs" directory.
 
+![htdocs folder](https://i.imgur.com/Xmi3EsU.png)
+
 In phpMyAdmin, create a database called 'crud' with the collation 'utf8_general_ci'.
 Run the following SQL commands from 'crudci.sql' in the SQL tab.
 
