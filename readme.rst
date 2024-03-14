@@ -2,14 +2,22 @@
 Installation
 ************
 
-Install Xampp Server
-Install CodeIgniter 3
-Clone the repository
+Install XAMPP Server and run as administrator.
+Clone the repository.
 
-in phpMyAdmin create a database called 'crud'
-run the following SQL Commands in 'crudci.sql' in the SQL Tab
+In phpMyAdmin, create a database called 'crud' with the collation 'utf8_general_ci'.
+Run the following SQL commands from 'crudci.sql' in the SQL tab.
 
+The commands in 'crudci.sql' will create an empty database.
 
-Make sure you have the ports 3306, 80, 443 open
+when everything is done and you have the Mysql and apache running properly
+
+type http://localhost/crudci/dashboard
+
+You will be redirected to a login page.
+
+The first time you log in, click on 'don't have an account' and then sign in and log in normally.
+
+Make sure you have ports 3306, 80, and 443 open.
 
 
