@@ -30,6 +30,12 @@
               Products
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="<?= base_url('') ?>suppliers">
+              <span data-feather="file"></span>
+              Suppliers
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
