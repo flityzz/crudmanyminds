@@ -9,12 +9,18 @@ Copy the repository and paste it into the XAMPP's "htdocs" directory.
 
 ![htdocs folder](https://i.imgur.com/Xmi3EsU.png)
 
+![crudci](https://i.imgur.com/03dhMvG.png)
+
+
+
 In phpMyAdmin, create a database called 'crud' with the collation 'utf8_general_ci'.
 Run the following SQL commands from 'crudci.sql' in the SQL tab.
 
 The commands in 'crudci.sql' will create an empty database.
 
 when everything is done and you have the Mysql and apache running properly
+
+![xampp](https://i.imgur.com/t7goAV5.png)
 
 type http://localhost/crudci/dashboard
 
