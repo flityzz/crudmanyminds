@@ -38,3 +38,5 @@ then put skip-grant-tables
 ![xampp] (https://i.imgur.com/qIF3ZCJ.png)
 
 
+
+
