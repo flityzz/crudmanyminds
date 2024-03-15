@@ -32,10 +32,10 @@ Make sure you have ports 3306, 80, and 443 open.
 
 
 if you are having trouble in phpMyAdmin access, click in my.init
-![myinit] (https://i.imgur.com/7Ifm9nc.png)
+![myinit](https://i.imgur.com/7Ifm9nc.png)
 
 then put skip-grant-tables
-![xampp] (https://i.imgur.com/qIF3ZCJ.png)
+![xampp](https://i.imgur.com/qIF3ZCJ.png)
 
 
 
